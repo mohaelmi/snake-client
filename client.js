@@ -13,8 +13,17 @@ const connect = function() {
     console.log(`server sent: ${data}`);
   })
 
+  conn.on("connect", () => {
+    console.log("connected successfully");
+    conn.write("Name: ME")
+  })
+  
+  conn.setEncoding("utf8");
+
   return conn
 }
+
+
 
 console.log("connecting ...");
 
