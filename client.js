@@ -16,6 +16,9 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("connected successfully");
     conn.write("Name: ME")
+    
+   
+
   })
   
   conn.setEncoding("utf8");
