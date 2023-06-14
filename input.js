@@ -1,5 +1,5 @@
-let connection;
-
+const { controlKeys } = require("./constants")
+let connection; 
 const setupInput = (conn) => {
   connection = conn
   const stdin = process.stdin;
@@ -14,19 +14,12 @@ const setupInput = (conn) => {
 
 
 const handleUserInput = function (key) {
-  if(key === 'w') {
-    connection.write("Move: up")
-   }
-   if(key === 'a') {
-    connection.write("Move: left")
-   }
-   if(key === 's') {
-    connection.write("Move: down")
-   }
-   if(key === 'd') {
-    connection.write("Move: right")
-   }
-   connection.write("Say: Heey")
+  
+ 
+  if(controlKeys[key]){ 
+    connection.write(controlKeys[key])
+  }
+  connection.write("Say: Heey")
   if (key === '\u0003') {
     process.exit();
   }
