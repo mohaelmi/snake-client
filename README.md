@@ -8,8 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["a player called ME is playing and every time snake eats dote will grow"](./pictures/Screenshot%202023-06-14%20225516.png)
-!["screenshot description"](#)
+[a player called ME is playing and every time snake eats dote will grow](./pictures/Screenshot%202023-06-14%20225516.png)
 
 
 ## Getting Started
