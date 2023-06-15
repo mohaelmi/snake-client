@@ -1,7 +1,7 @@
-const { controlKeys } = require("./constants")
-let connection; 
+const { controlKeys } = require("./constants");
+let connection;
 const setupInput = (conn) => {
-  connection = conn
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -13,13 +13,13 @@ const setupInput = (conn) => {
 
 
 
-const handleUserInput = function (key) {
-  
- 
-  if(controlKeys[key]){ 
-    connection.write(controlKeys[key])
+const handleUserInput = function(key) {
+
+
+  if (controlKeys[key]) {
+    connection.write(controlKeys[key]);
   }
-  connection.write("Say: Heey")
+  connection.write("Say: Hello!");
   if (key === '\u0003') {
     process.exit();
   }
@@ -27,4 +27,4 @@ const handleUserInput = function (key) {
 
 module.exports = {
   setupInput
-}
+};

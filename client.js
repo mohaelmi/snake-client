@@ -1,35 +1,33 @@
-const net = require("net")
-const { IP, PORT } = require("./constants")
+const net = require("net");
+const { IP, PORT } = require("./constants");
 
 const connect = () => {
   const conn = net.createConnection({
-   host: IP,
-   port: PORT
+    host: IP,
+    port: PORT
 
-  })
-
-  conn.setEncoding("utf8")
+  });
 
   conn.on("data", (data) => {
     console.log(`server sent: ${data}`);
-  })
+  });
 
   conn.on("connect", () => {
     console.log("connected successfully");
-    conn.write("Name: ME")
-    
-   
+    conn.write("Name: ME");
 
-  })
-  
+
+
+  });
+
   conn.setEncoding("utf8");
 
-  return conn
-}
+  return conn;
+};
 
 
 
 
-module.exports =  {
+module.exports = {
   connect
-}
+};
