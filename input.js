@@ -1,5 +1,7 @@
 const { controlKeys } = require("./constants");
 let connection;
+
+//function conn object and uses standard input to recieve user inputs
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
@@ -12,9 +14,8 @@ const setupInput = (conn) => {
 };
 
 
-
+//sends userinput to the server uses connection object
 const handleUserInput = function(key) {
-
 
   if (controlKeys[key]) {
     connection.write(controlKeys[key]);

@@ -1,6 +1,7 @@
 const net = require("net");
 const { IP, PORT } = require("./constants");
 
+//function that creates connection and displays data from server
 const connect = () => {
   const conn = net.createConnection({
     host: IP,
