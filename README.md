@@ -13,8 +13,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Getting Started
 
-  ###  [download snake server](#https://github.com/lighthouse-labs/snek-multiplayer)
-
+  ### [download snake server](https://github.com/lighthouse-labs/snek-multiplayer)
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
 
